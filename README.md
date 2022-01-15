@@ -1,4 +1,4 @@
-# graafialgoritmit
+# Graph algorithms
 
 Harjoitustyö tietorakenteet ja algoritmit kurssille. 
 
