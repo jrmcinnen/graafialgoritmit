@@ -1,0 +1,45 @@
+COMP.CS.300 Tietorakenteet ja algoritmit 1
+Harjoitustyö 2
+Jere Mäkinen, H273090
+jere.makinen@tuni.fi
+
+
+Käytetyt tietorakenteet
+
+Tieverkon kuvaamista varten on luotu omat structit väylille (Way) ja risteyksille (Crossroad).
+Väylän ominaisuuksia ovat sen id, pituus ja koordinaatit. Risteyksen ominaisuuksia puolestaan
+ovat sijainti ja risteykset, joihin tästä risteyksestä on mahdollista siirtyä. Nämä on talletettu
+unordered_map rakenteeseen, jossa avaimena on kuljettavan väylän id. Lisäksi risteyksellä on kolme
+apumuuttujaa, joita hyödynnetään graafialgoritmeissa: väri, etäisyys alkupisteestä ja väylän id,
+jota pitkin risteykseen on algoritmissa päädytty. Väylät ja risteykset on talletettu omiin map-
+rakenteisiinsa.
+
+
+Algoritmeista
+
+Sellaisen reitin löytämiseen, jossa on vähiten risteyksiä on käytetty leveyteen ensin -hakua.
+Algoritmi tallettaa risteyksiä jono rakenteeseen, jotta ne tulevat luontevasti käsitellyksi
+FIFO-periaatteen mukaisesti.
+
+Syklisen reitin löytämiseen käytetään syvyyteen ensin -hakua. Tämä algoritmi tallettaa risteyksiä
+pinoon, jotta ne tulevat käsitellyksi LIFO-periaatteen mukaisesti.
+
+Lyhimmän reitin etsimiseen käytetään Djikstran algoritmia. Tässä risteyksiä talletetaan prioriteetti-
+jonoon etäisyyden perusteella, jotta lyhyimmät reitit käsitellään ensin.
+
+"Turhien" kulkuväylien karsimiseen käytetään Primin algoritmi. Tämä hyödyntää prioriteettiteetti-
+jonoa hiukan Djikstran algoritmin tavoin. Tässä tosin järjestyksen perusteena ei ole etäisyys
+alkupisteestä, vaan pisteen kuljetun väylän etäisyys. Jos tieverkko ei ole yhtenäinen, joudutaan
+prioriteettijonon tyhjentyessä etsimään uusi alkupiste algoritmille.
+
+Ennen reitinhakualgoritmien suorittamista risteysten apumuuttujat alustetaan oletusarvoiksi funktiolla
+initialize_crossroads(). Jäsenmuuttuja crossroads_initialized_ pitää kirjaa siitä, ovatko risteykset
+alustettuina.
+
+
+Muita huomioita
+
+En saanut unordered_map ja unordered_set rakenteita toimimaan risteysten tallettamisessa. Niinpä
+jouduin tyytymään tässä vähemmän mielekkäisiin map- ja set-rakenteisiin. Tämä vaikuttaa ikävästi
+esimerkiksi funktioiden ways_from() ja add_way() tehokkuuksiin, sillä näissä tehtävät lisäykset
+ovat keskimäärin asymptoottisesti hitaampia.
