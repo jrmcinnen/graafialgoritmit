@@ -36,3 +36,5 @@ prioriteettijonon tyhjentyessä etsimään uusi alkupiste algoritmille.
 Ennen reitinhakualgoritmien suorittamista risteysten apumuuttujat alustetaan oletusarvoiksi funktiolla
 initialize_crossroads(). Jäsenmuuttuja crossroads_initialized_ pitää kirjaa siitä, ovatko risteykset
 alustettuina.
+
+Spring 2021
