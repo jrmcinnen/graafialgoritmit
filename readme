@@ -1,6 +1,10 @@
 COMP.CS.300 Tietorakenteet ja algoritmit 1
 Harjoitustyö
 
+I implemented the datastructures class. UI was given. Text-folder has txt files for testing the algorithms.
+
+Toteutin luokan datastructures, käyttöliittymä annettu valmiina pohjakoodina. Text-kansio sisältää tiedostoja ohjelman testaamista varten.
+
 Käytetyt tietorakenteet
 
 Tieverkon kuvaamista varten on luotu omat structit väylille (Way) ja risteyksille (Crossroad).
