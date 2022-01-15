@@ -1,8 +1,5 @@
 COMP.CS.300 Tietorakenteet ja algoritmit 1
-Harjoitustyö 2
-Jere Mäkinen, H273090
-jere.makinen@tuni.fi
-
+Harjoitustyö
 
 Käytetyt tietorakenteet
 
@@ -35,11 +32,3 @@ prioriteettijonon tyhjentyessä etsimään uusi alkupiste algoritmille.
 Ennen reitinhakualgoritmien suorittamista risteysten apumuuttujat alustetaan oletusarvoiksi funktiolla
 initialize_crossroads(). Jäsenmuuttuja crossroads_initialized_ pitää kirjaa siitä, ovatko risteykset
 alustettuina.
-
-
-Muita huomioita
-
-En saanut unordered_map ja unordered_set rakenteita toimimaan risteysten tallettamisessa. Niinpä
-jouduin tyytymään tässä vähemmän mielekkäisiin map- ja set-rakenteisiin. Tämä vaikuttaa ikävästi
-esimerkiksi funktioiden ways_from() ja add_way() tehokkuuksiin, sillä näissä tehtävät lisäykset
-ovat keskimäärin asymptoottisesti hitaampia.
